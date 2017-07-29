@@ -13,6 +13,8 @@ public class ThrustManager : MonoBehaviour {
 
     public Subsystem ThrustSystem;
 
+    private int initialTotalPower;
+
 	// Use this for initialization
 	void Start () {
 	    TimeSlider.maxValue = TotalTime;
@@ -20,6 +22,8 @@ public class ThrustManager : MonoBehaviour {
 
 	    TimeLeft = TotalTime;
 	    ThrustLeft = TotalThrust;
+
+	    initialTotalPower = SubsystemManager.Instance.TotalPower;
 	}
 	
 	// Update is called once per frame
@@ -32,5 +36,7 @@ public class ThrustManager : MonoBehaviour {
 	    TimeSlider.value = TimeLeft;
 	    ThrustSlider.maxValue = TimeLeft;
 	    ThrustSlider.value = ThrustLeft;
+
+	    SubsystemManager.Instance.TotalPower = Mathf.CeilToInt(initialTotalPower * (.5f + .5f * TimeLeft / TotalTime));
 	}
 }

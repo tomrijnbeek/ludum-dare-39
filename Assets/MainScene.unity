@@ -1876,7 +1876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Subsystems: []
   AvailablePower: 0
-  TotalPower: 10
+  TotalPower: 6
   PowerSlider: {fileID: 1336426488}
 --- !u!4 &1407390273
 Transform:
