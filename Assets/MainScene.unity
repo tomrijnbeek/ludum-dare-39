@@ -569,6 +569,9 @@ MonoBehaviour:
   Type: 2
   IsEnabled: 1
   PowerDrain: 1
+  KeyPopup: {fileID: 635374934}
+  PlayerRange: 1
+  PlayerInRange: 0
 --- !u!1 &330960418
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +836,11 @@ MonoBehaviour:
   TimeLeft: 0
   BaseFillRate: 0.1
   RechargeRate: 5
+--- !u!1 &510265018 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1927500584571486, guid: 0eb9f0624128e3f43abcb853ff95450b,
+    type: 2}
+  m_PrefabInternal: {fileID: 601904980}
 --- !u!1001 &574920957
 Prefab:
   m_ObjectHideFlags: 0
@@ -958,6 +966,10 @@ Prefab:
     - target: {fileID: 4900883575380096, guid: 0eb9f0624128e3f43abcb853ff95450b, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927500584571486, guid: 0eb9f0624128e3f43abcb853ff95450b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0eb9f0624128e3f43abcb853ff95450b, type: 2}
@@ -1105,6 +1117,11 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 1
+--- !u!1 &635374934 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1927500584571486, guid: 0eb9f0624128e3f43abcb853ff95450b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2129272314}
 --- !u!1 &729337200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,6 +1210,9 @@ MonoBehaviour:
   Type: 2
   IsEnabled: 1
   PowerDrain: 2
+  KeyPopup: {fileID: 510265018}
+  PlayerRange: 1
+  PlayerInRange: 0
 --- !u!1 &759555578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,6 +1381,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &941721222 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1927500584571486, guid: 0eb9f0624128e3f43abcb853ff95450b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1880428484}
 --- !u!1001 &977761499
 Prefab:
   m_ObjectHideFlags: 0
@@ -2057,6 +2082,9 @@ MonoBehaviour:
   Type: 1
   IsEnabled: 1
   PowerDrain: 3
+  KeyPopup: {fileID: 941721222}
+  PlayerRange: 1
+  PlayerInRange: 0
 --- !u!1 &1605618009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,6 +2345,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1927500584571486, guid: 0eb9f0624128e3f43abcb853ff95450b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0eb9f0624128e3f43abcb853ff95450b, type: 2}
   m_IsPrefabParent: 0
@@ -2527,6 +2559,10 @@ Prefab:
     - target: {fileID: 4900883575380096, guid: 0eb9f0624128e3f43abcb853ff95450b, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927500584571486, guid: 0eb9f0624128e3f43abcb853ff95450b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0eb9f0624128e3f43abcb853ff95450b, type: 2}
