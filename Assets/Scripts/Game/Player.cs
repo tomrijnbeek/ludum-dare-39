@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 
 public class Player : MonoBehaviour {
+    public static Player Instance;
+
     public Vector3 goalPoint;
     public float speed;
+
+    void Awake() {
+        Instance = this;
+    }
 
 	// Use this for initialization
 	void Start () {

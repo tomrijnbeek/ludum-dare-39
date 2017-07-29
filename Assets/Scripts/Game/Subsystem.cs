@@ -15,6 +15,9 @@ public class Subsystem : MonoBehaviour {
     public SubsystemType Type;
     public bool IsEnabled;
     public int PowerDrain;
+    public GameObject KeyPopup;
+    public float PlayerRange;
+    public bool PlayerInRange;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +26,13 @@ public class Subsystem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+	    PlayerInRange = (Player.Instance.transform.position - transform.position).sqrMagnitude <=
+	            PlayerRange * PlayerRange;
+
+        KeyPopup.SetActive(PlayerInRange);
+
+	    if (PlayerInRange && Input.GetKeyDown(KeyCode.Space)) {
+	        IsEnabled = !IsEnabled;
+	    }
 	}
 }
