@@ -2,6 +2,7 @@
 
 public class Player : MonoBehaviour {
     public Vector3 goalPoint;
+    public float speed;
 
 	// Use this for initialization
 	void Start () {
@@ -20,12 +21,13 @@ public class Player : MonoBehaviour {
 
 	    var goalDiff = goalPoint - transform.position;
         if (goalDiff.sqrMagnitude > .1f) {
-            transform.position = transform.position + goalDiff.normalized * Time.deltaTime;
+            transform.SetPositionAndRotation(
+                transform.position + goalDiff.normalized * Time.deltaTime * speed,
+                Quaternion.AngleAxis(Mathf.Atan2(goalDiff.y, goalDiff.x) * Mathf.Rad2Deg, Vector3.forward));
         }
 	}
 
     void OnCollisionEnter2D(Collision2D coll) {
-        Debug.Log("Stop!");
         goalPoint = transform.position;
     }
 }
